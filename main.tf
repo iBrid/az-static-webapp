@@ -42,8 +42,3 @@ resource "azurerm_static_web_app" "static_web_app" {
     environment = "Development"
   }
 }
-
-output "static_web_app_default_hostname" {
-  description = "Default hostname for the Static Web App"
-  value       = azurerm_static_web_app.static_web_app.default_hostname
-}
