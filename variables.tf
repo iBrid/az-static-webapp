@@ -9,3 +9,23 @@ variable "location" {
   type        = string
   default     = "West US 3"
 }
+
+#create variable for virtual network name and address space set virtual network name to "StaticWebAppVNet"
+variable "vnet_name" {
+  description = "The name of the virtual network"
+  type        = string
+  default     = "StaticWebAppVNet"
+}
+
+#create variable for subnet name set subnet name to "StaticWebAppSubnet"
+variable "subnet_name" {
+  description = "The name of the subnet"
+  type        = string
+  default     = "StaticWebAppSubnet"
+}
+#variable for the static web app name
+variable "static_web_app_name" {
+  description = "The name of the Azure Static Web App"
+  type        = string
+  default     = "MyStaticWebApp1"
+}
