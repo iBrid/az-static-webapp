@@ -34,9 +34,6 @@ resource "azurerm_static_web_app" "static_web_app" {
   repository_branch = var.repository_branch
   repository_token  = var.repository_token
 
-  identity {
-    type = "SystemAssigned"
-  }
   depends_on = [azurerm_subnet.subnet]
   tags = {
     environment = "Development"
