@@ -26,7 +26,7 @@ resource "azurerm_subnet" "subnet" {
 #add the static web app resource
 resource "azurerm_static_web_app" "static_web_app" {
   name                = var.static_web_app_name
-  location            = azurerm_resource_group.rg.location
+  location            = "West Us 2"
   resource_group_name = azurerm_resource_group.rg.name
   sku_tier            = "Free"
   repository_url      = "https://github.com/iBrid/my_webpage.git"
