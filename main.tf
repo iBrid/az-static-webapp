@@ -31,6 +31,8 @@ resource "azurerm_static_web_app" "static_web_app" {
   sku_tier            = "Free"
   repository_url      = "https://github.com/iBrid/my_webpage.git"
   # branch can be configured for VCS integration if supported by your provider / workflow
+  repository_branch   = var.repository_branch
+  repository_token    = var.repository_token
 
   identity {
     type = "SystemAssigned"

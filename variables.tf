@@ -1,3 +1,14 @@
+variable "repository_branch" {
+  type        = string
+  description = "Branch in the repository to use for Static Web App builds"
+  default     = "main"
+}
+
+variable "repository_token" {
+  type        = string
+  description = "Personal access token or deployment token for the repository. Store this as a sensitive variable in Terraform Cloud or as a local environment variable."
+  sensitive   = true
+}
 #create variables for resource group name and location set resource group name to "StaticWebAppRG" and location to "West US 3
 variable "resource_group_name" {
   description = "The name of the resource group"
